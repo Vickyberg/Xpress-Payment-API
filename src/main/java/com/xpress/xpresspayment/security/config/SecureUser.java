@@ -50,6 +50,6 @@ public class SecureUser implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return  appUser.isEnabled();
+        return  true;
     }
 }

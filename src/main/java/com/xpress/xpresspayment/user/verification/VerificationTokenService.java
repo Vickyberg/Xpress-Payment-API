@@ -8,9 +8,6 @@ public interface VerificationTokenService {
 
 
 
-    VerificationToken createRegistrationToken(String email);
-
-    VerificationToken generateEMailVerificationToken(String email);
 
     void deleteToken(Long id);
 

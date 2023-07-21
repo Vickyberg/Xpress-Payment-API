@@ -6,7 +6,6 @@ import com.xpress.xpresspayment.data.dtos.responses.LoginResponse;
 import com.xpress.xpresspayment.exceptions.XpressException;
 import com.xpress.xpresspayment.models.AppUser;
 import com.xpress.xpresspayment.models.TokenType;
-import com.xpress.xpresspayment.models.VerificationToken;
 import com.xpress.xpresspayment.security.config.SecureUser;
 import com.xpress.xpresspayment.security.services.jwt.JwtService;
 import com.xpress.xpresspayment.user.UserService;
@@ -82,15 +81,7 @@ public class AuthServiceImpl implements  AuthService{
     }
 
 
-    @Override
-    public Map<String, String> verifyLogin(String otp) throws XpressException {
-        VerificationToken verificationToken = verificationTokenService.verifyTokenAndFind(otp, TokenType.LOGIN_OTP);
-        verificationTokenService.deleteToken(verificationToken.getId());
-        AppUser appUser = userService.findUserByEmail(verificationToken.getEmail());
-        return Map.of(
-                "message", "login verified"
-        );
-    }
+
 
     @Scheduled(cron = "0 */1 * ? * *")
     public void enableAccount() {

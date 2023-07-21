@@ -47,7 +47,7 @@ public class UserServiceImpl implements  UserService {
         validateRegistrationRequest(registrationRequest);
         registrationRequest.setPassword(passwordEncoder.encode(registrationRequest.getPassword()));
         AppUser appUser = mapper.map(registrationRequest, AppUser.class);
-        VerificationToken verificationToken = verificationTokenService.createRegistrationToken(appUser.getEmail());
+//        VerificationToken verificationToken = verificationTokenService.createRegistrationToken(appUser.getEmail());
         userRepository.save(appUser);
         return mapper.map(appUser, RegistrationResponse.class);
     }

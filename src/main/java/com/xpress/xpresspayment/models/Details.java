@@ -1,16 +1,16 @@
-package com.xpress.xpresspayment.data.dtos.requests;
-
+package com.xpress.xpresspayment.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @RequiredArgsConstructor
-@Data
 @Builder
-public class LoginRequest {
-    private String email;
-    private String password;
+public class Details {
+
+    private  String phoneNumber;
+    private int amount;
 }

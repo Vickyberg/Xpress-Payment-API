@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 @RestController
-@RequestMapping("api/xpress-payment/v1/auth")
+@RequestMapping("billerstest.xpresspayments.com/api/v1/auth")
 @RequiredArgsConstructor
 public class AuthController {
 
@@ -21,10 +21,6 @@ public class AuthController {
         return ResponseEntity.ok(authService.login(loginRequest));
     }
 
-    @PostMapping("/verify-login/{otp}")
-    public ResponseEntity<Map<String, String>> verifyLogin(@PathVariable String otp) throws XpressException {
-        return ResponseEntity.ok(authService.verifyLogin(otp));
-    }
 
     @PostMapping("/logout/{email}")
     public ResponseEntity<String> logout(@PathVariable String email)  {

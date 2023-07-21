@@ -67,21 +67,4 @@ public class VerificationTokenServiceImpl implements  VerificationTokenService{
         return res;
     }
 
-    @Override
-    public VerificationToken generateEMailVerificationToken(String email) {
-        return createRegistrationToken(email);
-    }
-
-    @Override
-    public VerificationToken createRegistrationToken(String email) {
-        String rawToken = UUID.randomUUID().toString();
-        VerificationToken verificationToken = new VerificationToken(
-                rawToken,
-                LocalDateTime.now().plusHours(24),
-                email,
-                TokenType.EMAIL_VERIFICATION
-
-        );
-        return verificationTokenRepository.save(verificationToken);
-    }
 }

@@ -12,5 +12,5 @@ public interface AuthService {
 
     String logout(String email);
 
-    Map<String, String> verifyLogin(String otp) throws XpressException;
+
 }
