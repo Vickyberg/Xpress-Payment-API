@@ -23,7 +23,7 @@ public interface UserService {
 
     void registerFailedLogin(AppUser appUser);
 
-    PaymentResponse payForBil(PaymentRequest request);
+
 }
 
 
