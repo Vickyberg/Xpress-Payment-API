@@ -15,8 +15,6 @@ Setup
 <br/>
 User Registration
 <br/>
-Email Verification
-<br/>
 User Login
 <br/>
 User Logout
@@ -33,13 +31,11 @@ Express Validator for input validation.
 
 3. User Registration
    A user can register on the application by providing a valid email address and a strong password. And other details
-4. Email Verification
-   After successful registration, a verification token is provided 
-5. User Login
+4. User Login
    Registered users can log in using their verified email and password.
    Upon successful login, a JSON Web Token (JWT) is generated and sent to the client.
    The JWT is used for subsequent authenticated requests to protected routes.
-6. User Logout
+5. User Logout
    Users can log out of the application, which invalidates the JWT and requires re-authentication.
-7. Security Considerations
+6. Security Considerations
    Passwords are never stored in plaintext, they are encoded
