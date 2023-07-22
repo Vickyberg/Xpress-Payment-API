@@ -10,7 +10,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder
-public class PaymentResponse {
+public class VTUResponse {
 
     private  long requestId;
     private  String referenceId;

@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder
-public class PaymentRequest {
+public class VTURequest {
 
     private  long requestId;
     private String uniqueCode;
