@@ -21,6 +21,7 @@ User Logout
 <br/>
 Security Configuration
 <br/>
+VTU Service
 
 
 1. Technologies Used:<br/>Java, MySQL for database storage, JSON Web Tokens (JWT) for secure user authentication
@@ -39,3 +40,5 @@ Express Validator for input validation.
    Users can log out of the application, which invalidates the JWT and requires re-authentication.
 6. Security Considerations
    Passwords are never stored in plaintext, they are encoded
+7. VTU Service
+   The Response URL to the VTU service did not respond so i couldn't implement the VTU service

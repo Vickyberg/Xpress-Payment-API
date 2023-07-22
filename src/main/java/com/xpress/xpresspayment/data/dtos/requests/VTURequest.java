@@ -6,8 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.util.List;
+import java.util.UUID;
 
 
 @Data
@@ -17,6 +19,7 @@ import java.util.List;
 public class VTURequest {
 
     private  long requestId;
-    private String uniqueCode;
+    @UuidGenerator
+    private String uniqueCode = UUID.randomUUID().toString();
     private List<Details> details;
 }
